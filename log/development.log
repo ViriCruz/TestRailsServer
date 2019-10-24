@@ -7352,3 +7352,526 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-10-23 16:24:29 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (941.4ms)
+  Rendered layouts/_rails_default.html.erb (89.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (31.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1119ms (Views: 1086.2ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-10-23 16:24:33 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/_form.html.erb (447.8ms)
+  Rendered users/new.html.erb within layouts/application (449.9ms)
+  Rendered layouts/_rails_default.html.erb (67.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 548ms (Views: 527.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-10-23 16:24:37 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6FlJW7vFw/XADEm1jjQXnWRiP2IPj3GZ2z99s05wtWQCQEuSqaEbRU5146VPVMZxlg7xGdWNw2X6UxUZgjy3oA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-23 16:24:37 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_rails_default.html.erb (24.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-10-23 16:24:38 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_rails_default.html.erb (69.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2019-10-23 16:24:41 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_rails_default.html.erb (30.9ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddResetToUsers (20191023235347)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_digest" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_sent_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191023235347"]]
+  [1m[35m (53.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2019-10-24 12:52:53 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (192.0ms)
+  Rendered layouts/_rails_default.html.erb (92.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 310ms (Views: 303.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2019-10-24 12:52:56 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (536.9ms)
+  Rendered layouts/_rails_default.html.erb (43.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 594ms (Views: 588.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2019-10-24 13:11:51 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_rails_default.html.erb (25.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 31.8ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2019-10-24 13:11:54 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_rails_default.html.erb (29.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.8ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2019-10-24 13:11:54 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_rails_default.html.erb (19.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 23.9ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2019-10-24 13:12:11 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"78Zh6Td0peqfa8eL1FYG7ZPQ1FLJMtnAXW8HA2OOg3gF32MgJRB9WhESbZsVNtcBYbwaKRMwazx8A2+pr8KBvA==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_rails_default.html.erb (26.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 34.1ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/password_resets" for 127.0.0.1 at 2019-10-24 13:17:21 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YZwQDz3sdxf24RB3Mdz7m0adZaS9TKOyH4u/jTuR0SWLhRLGL4ivp3iYumfwvCp3tPGr32dOEU4+59cn993T4Q==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-9@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$G95FyGzTXtJ/hd.IHk/QmeWLfEeEt/5iorqU.aKYBs8pz4LwT/MHu"], ["updated_at", "2019-10-24 20:17:21.554362"], ["id", 10]]
+  [1m[35m (74.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-10-24 20:17:21.631855"], ["reset_sent_at", "2019-10-24 20:17:21.631466"], ["id", 10]]
+  [1m[35m (83.0ms)[0m  [1m[36mcommit transaction[0m
+UserMailer#password_reset: processed outbound mail in 0.3ms
+Completed 500 Internal Server Error in 431ms (ActiveRecord: 159.4ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/mailers/user_mailer.rb:19:in `password_reset'
+app/models/user.rb:64:in `send_password_reset_email'
+app/controllers/password_resets_controller.rb:9:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Started POST "/password_resets" for 127.0.0.1 at 2019-10-24 14:07:32 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YZwQDz3sdxf24RB3Mdz7m0adZaS9TKOyH4u/jTuR0SWLhRLGL4ivp3iYumfwvCp3tPGr32dOEU4+59cn993T4Q==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-9@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$F1AACJBsMuuvX9Cyl.T1cevd5IKPFJbGtZDFQMvbnKC3Jm6E9LTeO"], ["updated_at", "2019-10-24 21:07:32.454881"], ["id", 10]]
+  [1m[35m (92.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-10-24 21:07:32.549037"], ["reset_sent_at", "2019-10-24 21:07:32.548596"], ["id", 10]]
+  [1m[35m (82.2ms)[0m  [1m[36mcommit transaction[0m
+UserMailer#password_reset: processed outbound mail in 0.2ms
+Completed 500 Internal Server Error in 366ms (ActiveRecord: 176.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/mailers/user_mailer.rb:18:in `password_reset'
+app/models/user.rb:64:in `send_password_reset_email'
+app/controllers/password_resets_controller.rb:9:in `create'
+Started GET "/password_resets/new" for 127.0.0.1 at 2019-10-24 14:07:37 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_rails_default.html.erb (25.2ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/user_mailer/password_reset" for 127.0.0.1 at 2019-10-24 14:07:40 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/password_reset"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+UserMailer#password_reset: processed outbound mail in 0.2ms
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/mailers/user_mailer.rb:18:in `password_reset'
+Started GET "/rails/mailers/user_mailer/password_reset" for 127.0.0.1 at 2019-10-24 14:10:27 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/password_reset"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.0ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.4ms)
+UserMailer#password_reset: processed outbound mail in 162.8ms
+  Rendering /home/gabriela-cruz/.rvm/gems/ruby-2.5.1/gems/railties-5.1.6/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /home/gabriela-cruz/.rvm/gems/ruby-2.5.1/gems/railties-5.1.6/lib/rails/templates/rails/mailers/email.html.erb (3.7ms)
+Completed 200 OK in 198ms (Views: 18.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/mailers/user_mailer/password_reset?part=text%2Fhtml" for 127.0.0.1 at 2019-10-24 14:10:27 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"user_mailer/password_reset"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.3ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.4ms)
+UserMailer#password_reset: processed outbound mail in 8.7ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 4.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2019-10-24 14:13:46 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WqgDuB/W8J54BNoDVqAmDr1uxor4qPnHwjx73Hkq+9SwsQFxDbIoLvZ9cBOXwPfiTwII8SKqSzvjUBN2tWb5EA==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-9@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$4ta5l8L5YQYRZCxwMajTLe0VAf8U6H9I1lMkMab27tIBRIpsrnHjO"], ["updated_at", "2019-10-24 21:13:46.241929"], ["id", 10]]
+  [1m[35m (62.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-10-24 21:13:46.306692"], ["reset_sent_at", "2019-10-24 21:13:46.305751"], ["id", 10]]
+  [1m[35m (76.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.8ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.5ms)
+UserMailer#password_reset: processed outbound mail in 18.1ms
+Sent mail to example-9@railstutorial.org (5.8ms)
+Date: Thu, 24 Oct 2019 14:13:46 -0700
+From: noreply@example.com
+To: example-9@railstutorial.org
+Message-ID: <5db2140a66722_47b82afe47cd3d0c69850@gaby-cruz.mail>
+Subject: Password reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5db2140a658a3_47b82afe47cd3d0c69756";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5db2140a658a3_47b82afe47cd3d0c69756
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+http://localhost:3000/password_resets/U5sJ1oXl-r_PSdE9PbFubA/edit?email=example-9%40railstutorial.org
+
+This link will expire in two hours.
+
+If you did not request your password to be reset, please ignore this email and
+your password will stay as it is.
+
+----==_mimepart_5db2140a658a3_47b82afe47cd3d0c69756
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Password reset</h1>
+
+<p>To reset your password click the link below:</p>
+
+<a href="http://localhost:3000/password_resets/U5sJ1oXl-r_PSdE9PbFubA/edit?email=example-9%40railstutorial.org">Reset password</a>
+
+<p>This link will expire in two hours.</p>
+
+<p>
+If you did not request your password to be reset, please ignore this email and
+your password will stay as it is.
+</p>
+  </body>
+</html>
+
+----==_mimepart_5db2140a658a3_47b82afe47cd3d0c69756--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 256ms (ActiveRecord: 140.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 14:13:46 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_rails_default.html.erb (31.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-9@railstutorial.org"], ["LIMIT", 1]]
+Started GET "/password_resets/new" for 127.0.0.1 at 2019-10-24 15:11:50 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_rails_default.html.erb (39.1ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 46.1ms)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2019-10-24 15:12:27 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xRIfmM8iZkDBFIfxOwCbGIb2TvU6OBoFpXaDud3tjwwvCx1R3Ua+8E9tLeH6YEr0dJqAjuA6qPmEGusTEaGNyA==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-9@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$wQdc9PjFVc/nvpHA2G9aSu/pwXa1zx7fzH6xooeZo7zEtxMKxWNr."], ["updated_at", "2019-10-24 22:12:27.679767"], ["id", 10]]
+  [1m[35m (78.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-10-24 22:12:27.761268"], ["reset_sent_at", "2019-10-24 22:12:27.760703"], ["id", 10]]
+  [1m[35m (65.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (3.5ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (1.1ms)
+UserMailer#password_reset: processed outbound mail in 163.6ms
+Sent mail to example-9@railstutorial.org (5.8ms)
+Date: Thu, 24 Oct 2019 15:12:28 -0700
+From: noreply@example.com
+To: example-9@railstutorial.org
+Message-ID: <5db221cc1dd9_47b42afe4822221857754@gaby-cruz.mail>
+Subject: Password reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5db221cc10b1_47b42afe4822221857634";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5db221cc10b1_47b42afe4822221857634
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+To reset your password click the link below:
+
+http://localhost:3000/password_resets/rvhkauj-w_HSxKcyBSs8Bw/edit?email=example-9%40railstutorial.org
+
+This link will expire in two hours.
+
+If you did not request your password to be reset, please ignore this email and
+your password will stay as it is.
+
+----==_mimepart_5db221cc10b1_47b42afe4822221857634
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Password reset</h1>
+
+<p>To reset your password click the link below:</p>
+
+<a href="http://localhost:3000/password_resets/rvhkauj-w_HSxKcyBSs8Bw/edit?email=example-9%40railstutorial.org">Reset password</a>
+
+<p>This link will expire in two hours.</p>
+
+<p>
+If you did not request your password to be reset, please ignore this email and
+your password will stay as it is.
+</p>
+  </body>
+</html>
+
+----==_mimepart_5db221cc10b1_47b42afe4822221857634--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 427ms (ActiveRecord: 147.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 15:12:28 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_rails_default.html.erb (39.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/rvhkauj-w_HSxKcyBSs8Bw/edit?email=example-9%40railstutorial.org" for 127.0.0.1 at 2019-10-24 15:12:46 -0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"example-9@railstutorial.org", "id"=>"rvhkauj-w_HSxKcyBSs8Bw"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-9@railstutorial.org"], ["LIMIT", 1]]
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered password_resets/edit.html.erb within layouts/application (259.4ms)
+  Rendered layouts/_rails_default.html.erb (20.3ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 348ms (Views: 284.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/password_resets/rvhkauj-w_HSxKcyBSs8Bw" for 127.0.0.1 at 2019-10-24 15:15:02 -0700
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for PasswordResetsController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PATCH "/password_resets/rvhkauj-w_HSxKcyBSs8Bw" for 127.0.0.1 at 2019-10-24 16:02:05 -0700
+Processing by PasswordResetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"my1nanA5NL9Sr/11HX5UrOKVdmPaVm9m1ImlELdQ8VlxNGWjYl3sD9zWV2XcHoVAEPm4GABU3Zr15c26exzznQ==", "email"=>"example-9@railstutorial.org", "user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update password", "id"=>"rvhkauj-w_HSxKcyBSs8Bw"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example-9@railstutorial.org"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "example-9@railstutorial.org"], ["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered password_resets/edit.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_rails_default.html.erb (19.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 165ms (Views: 26.8ms | ActiveRecord: 1.2ms)
+
+
