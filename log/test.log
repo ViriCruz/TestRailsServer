@@ -9181,3 +9181,266 @@ UserMailerTest: test_password_reset
   Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.5ms)
 UserMailer#password_reset: processed outbound mail in 4.8ms
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (17.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "admin", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$/zPAoxqotjphjunrmzn07./nVYYmZ9uCsCYHdIW1025c3D5uktb9C', 't', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 762146111)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('Sterling Archer', 'duchess@example.gov', '$2a$04$1lAhizY/oVi8r0W577Ra4uWc376tpnhf9F5izs4MCrYjR3RyewT02', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('Lana Kane', 'hands@example.gov', '$2a$04$PZCIeQ4pE/hLdgH8K.X0UuGjMuJbr32/hWYQELpn3akq0dv05vDa6', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('Malory Archer', 'boss@example.gov', '$2a$04$4.fQ.euGEyWu/zxTRz4h2uBdr77MwIQw6Rbf/m5hFykKCkVtXb/pS', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 659682706)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 0', 'user-0@example.com', '$2a$04$gg0YluqSumIVCcx3pxNjDugyoEBPGmSiGuRz7sNFwRYQi2rMN1c7G', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 338193910)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 1', 'user-1@example.com', '$2a$04$/YhKlMNFRF9/hmYA12ENdOxGdAHrv/xJLRdNGURDyaWHkgA6YevpC', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 590306657)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 2', 'user-2@example.com', '$2a$04$QPs4PvLeXRKQRWyfVlOXr.k5GQrdv8lAtEzDKtVxVTdZXW9I/oxA2', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 975572189)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 3', 'user-3@example.com', '$2a$04$E.auRJpzU9H2a.IAn4U3wum5wctxgCmSFl9lG5efFfuOkfRJadYXi', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 220281934)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 4', 'user-4@example.com', '$2a$04$95fyvLqfUb9jeqXAniD5z.1YLoEV34i.4QQHz.Br9iO9xZKKx7zLu', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 323332591)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 5', 'user-5@example.com', '$2a$04$NQkNCG8P.0zW610GmqVLw.nb6/nBwuAUEm2tj7M/L73zT7Z3dFV3W', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 608344442)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 6', 'user-6@example.com', '$2a$04$L0ewkMeUgh30DpbaWihaYOQcmfuQlE3aEzE/uhfy9fFpl/DkbnVvq', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 1028376774)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 7', 'user-7@example.com', '$2a$04$CWmHHZXkTfRk1izAV0kkqOBDDFdL6Ymzr7TUw2vCuOotQHU.WP3x.', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 172816471)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 8', 'user-8@example.com', '$2a$04$UYlrFm7RQoJEuRyjnbJf2ewzSlsnp0IM6rsMYuUMvu0DaR5LgSU.i', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 452191684)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 9', 'user-9@example.com', '$2a$04$8IUeaLjqr5bMFI6ZA8NcSOP6BiWMNtCbvtRO8GutH3ddiNlZTp7X.', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 771020115)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 10', 'user-10@example.com', '$2a$04$GYTuKy0gnIALWsRfRokcAe/IdJJ2C9nXuezhxyrK5CdpKG2h20/J.', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 956993830)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 11', 'user-11@example.com', '$2a$04$Xc.va/Spu5D2sy42C3K0cOktlaaKUU6ExN7uiZGkGO3rNx07C36Ty', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 235774389)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 12', 'user-12@example.com', '$2a$04$PPi5ZJ9c4zgMrMM2jYCC9Ohb2.ZYrHG0AqG8JljoKYihK.RICvCde', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 386199561)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 13', 'user-13@example.com', '$2a$04$NKcEUse8o0ua4gXC4DBX8erclzChOkvhVc1luIKfwDjB5VyqyBypG', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 537116830)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 14', 'user-14@example.com', '$2a$04$8dOPJ8JZJtn1AsRYTTHESuAfpUbJa2YcgB0BGp60CzZUDON4ckRSS', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 1046959423)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 15', 'user-15@example.com', '$2a$04$bcB4dPK3e8vc3Q3RYmlHjuqrfuUIYrR8urGRg9JSCT021sdgY0m/C', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 157312430)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 16', 'user-16@example.com', '$2a$04$WcXluFkG6T2TzE4xlqHje.cSmsH.dvjfo5kbxGIE4hYnWam61liVO', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 275330066)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 17', 'user-17@example.com', '$2a$04$vpymx1TNdXO9OZV0pvfeCOOGF4ZD0htYwWNymUMEM8YJQcq61OHwC', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 661521543)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 18', 'user-18@example.com', '$2a$04$iqXkepOd1kwtmlAU94MaBe6VBC.tl71OOQ6ikMC91Igca/WhQ990G', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 936450328)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 19', 'user-19@example.com', '$2a$04$dSuJjkHyo/PQfabvZRKwQe6PAvNTCjiSzfRiSlT.3m2hPpmFb6AqC', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 14035331)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 20', 'user-20@example.com', '$2a$04$ssvcwM.7oBxLMw2gJtPcHeXmCUwFXZ6S.VvyAyUOXCcpNVMduZVve', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 304595689)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 21', 'user-21@example.com', '$2a$04$4364kbqfPMSeWhaqrBQRTeWLWb7MU8oBKP0ChvCAbBP8kPtT1227m', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 622916212)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 22', 'user-22@example.com', '$2a$04$uL7F3jxANzZieAM0xU5vT.57vtq6bYfn9oYqjSd/RY.xQoxrgfc8S', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 1009361868)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 23', 'user-23@example.com', '$2a$04$AwkrSDjTZbwUth0.dZ8IbOe.Z/dbLKRqrs53oi0n4awK66sjjB0Qe', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 187601757)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 24', 'user-24@example.com', '$2a$04$i9bwlbe8NhwFN.Cjr4m7pOqPd3X2G.sSxCjdvEQpPPv.ghA65Zn7C', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 357172992)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 25', 'user-25@example.com', '$2a$04$toEIDqtYciNL8.HZNQBxIukx0oGEAeAdJMqYZgpXb9K5qt/wbBDGC', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 575485547)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 26', 'user-26@example.com', '$2a$04$4OiIxckT6kRRIlBY2Tt.WOmH3laYmdlpyrYlathD4ldfmTI9zleau', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 994338771)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 27', 'user-27@example.com', '$2a$04$wr/7Me7B.94dDpGpw7K6L.Sc8rMoSdoz5yWhQcaZNdGjSlGjBap6y', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 205739844)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 28', 'user-28@example.com', '$2a$04$aZSjKpOuCnXeQ86ztl1zyOXl4OqdPdNhmWspLzdzKxKOAKSJDmxd6', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 486296279)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 29', 'user-29@example.com', '$2a$04$XI905u3emIFmAfD7O9vUzOJcq6KnI/hsApEyJgVbs0WWuYyk75xY2', 't', '2019-10-25 19:36:57 UTC', '2019-10-25 19:36:57.771525', '2019-10-25 19:36:57.771525', 737901126)[0m
+  [1m[35m (68.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+UsersEditTest: test_successful_edit_with_friendly_forwarding
+------------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 762146111], ["LIMIT", 1]]
+Started GET "/users/762146111/edit" for 127.0.0.1 at 2019-10-25 12:36:57 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"762146111"}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"michael@example.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "michael@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$CmOOjUa8gdPVJHRo002fsup2KF1GjH7S2dtzoT325fTKvOASKWceK"], ["updated_at", "2019-10-25 19:36:58.015489"], ["id", 762146111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/762146111/edit
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+Started PATCH "/users/762146111" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"Foo Bar", "email"=>"foo@bar.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"762146111"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 762146111], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 762146111], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "foo@bar.com"], ["id", 762146111], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "email" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "Foo Bar"], ["email", "foo@bar.com"], ["updated_at", "2019-10-25 19:36:58.024418"], ["id", 762146111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/762146111
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 762146111], ["LIMIT", 1]]
+  [1m[35m (4.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (197.6ms)
+  Rendered layouts/_rails_default.html.erb (1.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 204ms (Views: 203.8ms | ActiveRecord: 0.0ms)
+Started GET "/contact" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_rails_default.html.erb (0.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.2ms)
+  Rendered users/_form.html.erb (289.4ms)
+  Rendered users/new.html.erb within layouts/application (290.2ms)
+  Rendered layouts/_rails_default.html.erb (0.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 293ms (Views: 292.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+PasswordResetsTest: test_password_resets
+----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 762146111], ["LIMIT", 1]]
+Started GET "/password_resets/new" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_rails_default.html.erb (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+Started POST "/password_resets" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"password_reset"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_rails_default.html.erb (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms)
+Started POST "/password_resets" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"password_reset"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "michael@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$04$6f9P9Og1xjJhAVmUKNumH.WaH94VyMnahVrmZeLIEyw7NLaxLZ7Oy"], ["updated_at", "2019-10-25 19:36:58.617446"], ["id", 762146111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-10-25 19:36:58.621842"], ["reset_sent_at", "2019-10-25 19:36:58.621375"], ["id", 762146111]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (2.3ms)
+UserMailer#password_reset: processed outbound mail in 24.0ms
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+UsersLoginTest: test_login_with_invalid_information
+---------------------------------------------------
+Started GET "/login" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_rails_default.html.erb (2.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_rails_default.html.erb (1.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2019-10-25 12:36:58 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_rails_default.html.erb (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "admin", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$XDkRZweMGSN.lVNkXHiHteCKOjisjrySFhyS6eyRFKlNt8JFpMDoS', 't', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 762146111)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('Sterling Archer', 'duchess@example.gov', '$2a$04$ORIbdKjHaa0d7WNCxzlEEuOBiVmWn0mjPHiUq/CjcxXgsoA6mEFN2', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 950961012)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('Lana Kane', 'hands@example.gov', '$2a$04$QBYrsLM.p.Qwa7x9lzMWTONE8BkHSdsO9ajm3BozUyAY71VYO1tzm', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('Malory Archer', 'boss@example.gov', '$2a$04$Co7yo39qMh9I3ue2wdvHZeNRBwsRchmKKvhhmHqMmvZaWOo6fLTv2', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 659682706)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 0', 'user-0@example.com', '$2a$04$3iunpng16.hvJTv2FA/RhupzbHTE97p.yyJEC27LWxQkN5r2iwTau', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 338193910)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 1', 'user-1@example.com', '$2a$04$B3chLH0fvZz/VgDlRoeOPeaviajkPG84r1wS03V1RrgIZZdxV.PQu', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 590306657)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 2', 'user-2@example.com', '$2a$04$lEVx8mgIvDj9hbJ7XTyPhOMQgrgQLbm4MfQ/ZxgdCnBjE2mQjnm46', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 975572189)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 3', 'user-3@example.com', '$2a$04$c6wl2RWmCZbyPtJcAIvdpOMfbfUY.g9YYgOgbKcoxOHD2TQhdvhji', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 220281934)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 4', 'user-4@example.com', '$2a$04$By7fMa54XI4PVktAz61yUOOtMMiobmBn92UYZvs/4.ZYABpMoSW1u', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 323332591)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 5', 'user-5@example.com', '$2a$04$1wepgRxDl9xahjl3bEOd/OCgfvoK8gcdS7NdO1QtkcXmYIArsHHS.', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 608344442)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 6', 'user-6@example.com', '$2a$04$8hX9Yf0IIMJrhDHizFHX6Or2AoIYy4Zjxb/4lmTLzH1eemT6NHb6q', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 1028376774)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 7', 'user-7@example.com', '$2a$04$pKig3RK1Ml0wvQ/6vifnLO7Qz/fWCQQ9Ul1N9FllPR7uUOaMWonCC', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 172816471)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 8', 'user-8@example.com', '$2a$04$LKVkHNSACT2YTS5ALEnY.ew5t/e0VzwC50dVWlt8nmPJagHu1EPQq', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 452191684)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 9', 'user-9@example.com', '$2a$04$/ooasTAs.O16dQhRYX6PpubRLZmHOJMTaFEPHS/laOcxTbrUrOu5W', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 771020115)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 10', 'user-10@example.com', '$2a$04$XlCYqkuyZ0YPAhdbxjS2petsOIuJuATgrsriczuw8xQnPEos/nOGK', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 956993830)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 11', 'user-11@example.com', '$2a$04$BKJ0mD9xhdNx1PT3tSy9guurpL0OcXsNNQq9sCLk.kwMUJaiU0.jC', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 235774389)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 12', 'user-12@example.com', '$2a$04$cxzLtFO4N7hAvk2sLCmVTumYGk89JltkvLgxye7AaXZ0H.5Qeg6D6', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 386199561)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 13', 'user-13@example.com', '$2a$04$u32CYIWKiDdXKt9tdhWwLOLmbngVDupQKg9MFtxiQYJHLQlXzQJka', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 537116830)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 14', 'user-14@example.com', '$2a$04$9lf2NraaGYwNnoORx9vQx.7GIHwEGylGMQdxGZYyHkfuHklM4LONW', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 1046959423)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 15', 'user-15@example.com', '$2a$04$YKjMMAyooaowL7VZYkr28ef2bKWqREf5E4S8jbgPkX2fJ3A4h8Ivm', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 157312430)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 16', 'user-16@example.com', '$2a$04$3IARMLBmHmaxrja9tSJXj.CjJ1V5I5iUM.8A0vufoV/TEWHqapBzW', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 275330066)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 17', 'user-17@example.com', '$2a$04$dO1tQrS6O/pI0q2TF/ApuOjvdNJRUQtQp8egsTutBjD42mQe3uvaS', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 661521543)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 18', 'user-18@example.com', '$2a$04$d0D41UCZcFbRmP7lH0AfIejt.JUzK0IBPzM/uXyCEgqNkvqx4WZGq', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 936450328)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 19', 'user-19@example.com', '$2a$04$eV48TlmwQ7UXuWlvFsCcHuIwPcpR8iJevE65EtKh1exBUhlTYyd2S', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 14035331)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 20', 'user-20@example.com', '$2a$04$hWPO1TRUlfr2Q9Rry40uyOcEDVgtEw/2rrugIFbGMggJI8oCA.aB6', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 304595689)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 21', 'user-21@example.com', '$2a$04$LkWvUgHPx3soIixNsPclkeC2AXsuALAViOoxfcNH4aRRudf.v35M2', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 622916212)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 22', 'user-22@example.com', '$2a$04$N6PMe.c/wzIf/b70MeWLGe1HTsA8ONMYv6cyIBrPMnMTM9lSWgCzy', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 1009361868)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 23', 'user-23@example.com', '$2a$04$TGyCkMFQMOMrh2bi6hbln.hnxg1j2KiKtHkMN4Oe1axPKi0Q37bGS', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 187601757)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 24', 'user-24@example.com', '$2a$04$fXtepTxd2ueaETLBD3aWjena4GZ41O3bJoDl5arTzaSaPCv9Ttwoa', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 357172992)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 25', 'user-25@example.com', '$2a$04$pm9n6OpGcaOVAY96EnPshOrw0.cEoLq4FKmhOtIeOLj7estNDFxQW', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 575485547)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 26', 'user-26@example.com', '$2a$04$Ku9zujsYxigvFqBRerpBJ.jpWtfpGAz77HR.uTuN3IpjxjMzrKt06', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 994338771)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 27', 'user-27@example.com', '$2a$04$T70hzb4ydYwtALqBbqPuKexnj420zqFSPAO3zg8f.7OL0TsEh994K', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 205739844)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 28', 'user-28@example.com', '$2a$04$r52FVvVgmXBGuyWFWCEcuujlwOYvog/66u9mouSkAL1IAGs0Mal7C', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 486296279)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('User 29', 'user-29@example.com', '$2a$04$fnc.sy1dvBLfUnA0RJcWzuZcc7XveAb8d8IDP4GFVVS/nfgfTKuZu', 't', '2019-10-25 20:06:11 UTC', '2019-10-25 20:06:11.869409', '2019-10-25 20:06:11.869409', 737901126)[0m
+  [1m[35m (68.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+PasswordResetsTest: test_password_resets
+----------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 762146111], ["LIMIT", 1]]
+Started GET "/password_resets/new" for 127.0.0.1 at 2019-10-25 13:06:12 -0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (260.6ms)
+  Rendered layouts/_rails_default.html.erb (136.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 408ms (Views: 403.7ms | ActiveRecord: 0.0ms)
+Started POST "/password_resets" for 127.0.0.1 at 2019-10-25 13:06:12 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"password_reset"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_rails_default.html.erb (0.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started POST "/password_resets" for 127.0.0.1 at 2019-10-25 13:06:12 -0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"password_reset"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "michael@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$04$c.PCRN0hnByGdPE87DCvkOVPu8c68l9c6cZP9ST8QDu4PxpaQh1A2"], ["updated_at", "2019-10-25 20:06:12.493534"], ["id", 762146111]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-10-25 20:06:12.494991"], ["reset_sent_at", "2019-10-25 20:06:12.494737"], ["id", 762146111]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (2.1ms)
+UserMailer#password_reset: processed outbound mail in 5.9ms
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
