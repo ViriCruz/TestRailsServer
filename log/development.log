@@ -8215,3 +8215,136 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 42ms (Views: 37.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-10-25 16:52:50 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (131.9ms)
+  Rendered layouts/_rails_default.html.erb (34.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (13.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 193ms (Views: 188.0ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/signup" for 127.0.0.1 at 2019-10-25 16:53:05 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.2ms)
+  Rendered users/_form.html.erb (272.0ms)
+  Rendered users/new.html.erb within layouts/application (272.6ms)
+  Rendered layouts/_rails_default.html.erb (18.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 297ms (Views: 296.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-10-25 16:53:16 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZZOX8uWJQdMEt6R1THTTqxfNhb3VCWl7uF4PJs2hRJAJXdl2zkLd86gmzkgQ8cYnP0AJ9cw2wv9XlLcY/OaF1A==", "user"=>{"name"=>"gaby cruz", "email"=>"viridiana.cruz.olivera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "viridiana.cruz.olivera@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "gaby cruz"], ["email", "viridiana.cruz.olivera@gmail.com"], ["created_at", "2019-10-25 23:53:16.937130"], ["updated_at", "2019-10-25 23:53:16.937130"], ["password_digest", "$2a$10$hqU3fygziznRY./OfECYL.m96Xvkt6jJRSyVnVakmFC11Ox7UhUL6"], ["activation_digest", "$2a$10$dUECrnJYWu259.68iJNZouJJtawrHSAS30nx6WxtPbxVwO/tODXl6"]]
+  [1m[35m (78.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.2ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.6ms)
+UserMailer#account_activation: processed outbound mail in 127.2ms
+Sent mail to viridiana.cruz.olivera@gmail.com (4.6ms)
+Date: Fri, 25 Oct 2019 16:53:17 -0700
+From: noreply@example.com
+To: viridiana.cruz.olivera@gmail.com
+Message-ID: <5db38aed4ec96_6cb02ab8ea1b0544515d8@gaby-cruz.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5db38aed4df5b_6cb02ab8ea1b054451461";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5db38aed4df5b_6cb02ab8ea1b054451461
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi gaby cruz,
+
+Welcome to the Sample App! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/XE4nB72Qxcjl1kt4627QIg/edit?email=viridiana.cruz.olivera%40gmail.com
+
+
+----==_mimepart_5db38aed4df5b_6cb02ab8ea1b054451461
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Sample App</h1>
+
+<p>Hi gaby cruz,</p>
+
+<p>
+Welcome to the Sample App! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/XE4nB72Qxcjl1kt4627QIg/edit?email=viridiana.cruz.olivera%40gmail.com">Activate</a>
+  </body>
+</html>
+
+----==_mimepart_5db38aed4df5b_6cb02ab8ea1b054451461--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 452ms (ActiveRecord: 79.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-25 16:53:17 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_rails_default.html.erb (16.1ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/account_activations/XE4nB72Qxcjl1kt4627QIg/edit?email=viridiana.cruz.olivera%40gmail.com" for 127.0.0.1 at 2019-10-25 16:55:11 -0700
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"viridiana.cruz.olivera@gmail.com", "id"=>"XE4nB72Qxcjl1kt4627QIg"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viridiana.cruz.olivera@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (86.9ms)[0m  [1m[33mUPDATE "users" SET "activated" = 't', "activated_at" = '2019-10-25 23:55:11.691149' WHERE "users"."id" = ?[0m  [["id", 104]]
+Redirected to http://localhost:3000/users/104
+Completed 302 Found in 160ms (ActiveRecord: 87.7ms)
+
+
+Started GET "/users/104" for 127.0.0.1 at 2019-10-25 16:55:11 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"104"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_rails_default.html.erb (20.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.3ms)
+
+
